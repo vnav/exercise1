@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+	<mapping map-id="fund" type="one-way">
+		<class-a>java.util.Map</class-a>
+		<class-b>app.model.Fund</class-b>
+	    <field>
+			<a get-method="get" key="FundCode" >this</a>
+			<b>fundCode</b>
+	    </field>
+	    <field>
+			<a get-method="get" key="BenchmarkCode">this</a>
+			<b>benchmarkCode</b>
+	    </field>
+	    <field>
+			<a get-method="get" key="FundName">this</a>
+			<b>name</b>
+	    </field>
+	    
+	</mapping>
+	
+	<mapping map-id="benchmark" type="one-way">
+		<class-a>java.util.Map</class-a>
+		<class-b>app.model.Benchmark</class-b>
+	    <field>
+			<a get-method="get" key="BenchmarkCode">this</a>
+			<b>benchmarkCode</b>
+	    </field>
+	    <field>
+			<a get-method="get" key="BenchmarkName">this</a>
+			<b>name</b>
+	    </field>
+	</mapping>
+	
+	<mapping map-id="fundReturn" type="one-way">
+		<class-a>java.util.Map</class-a>
+		<class-b>app.model.FundReturn</class-b>
+	    <field>
+			<a get-method="get" key="Code" >this</a>
+			<b>fundCode</b>
+	    </field>
+	    <field>
+			<a get-method="get" key="Date" date-format="dd/MM/yyyy">this</a>
+			<b>date</b>
+	    </field>
+	    <field>
+			<a get-method="get" key="Return(%)">this</a>
+			<b>returnValue</b>
+	    </field>	    
+	</mapping>
+	
+	<mapping map-id="benchmarkReturn" type="one-way">
+		<class-a>java.util.Map</class-a>
+		<class-b>app.model.BenchmarkReturn</class-b>
+	    <field>
+			<a get-method="get" key="Code" >this</a>
+			<b>benchmarkCode</b>
+	    </field>
+	    <field>
+			<a get-method="get" key="Date" date-format="yyyy-MM-dd">this</a>
+			<b>date</b>
+	    </field>
+	    <field>
+			<a get-method="get" key="Return(%)">this</a>
+			<b>returnValue</b>
+	    </field>	    
+	</mapping>
+	
+	
+</mappings> 	
