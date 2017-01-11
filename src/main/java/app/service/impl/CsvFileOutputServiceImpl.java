@@ -31,7 +31,7 @@ public class CsvFileOutputServiceImpl implements FileOutputService {
 	 *
 	 * @return the output csv headers
 	 */
-	private String[] getOutputCsvHeaders() {
+	String[] getOutputCsvHeaders() {
 		String headerStr = resourceBundleUtil.getMessage("output.headers");
 		return headerStr.split(",");		
 	}

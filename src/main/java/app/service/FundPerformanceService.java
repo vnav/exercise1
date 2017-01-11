@@ -82,7 +82,7 @@ public class FundPerformanceService {
 	 * @param benchmarkReturn the benchmark return
 	 * @return the big decimal
 	 */
-	private BigDecimal computeExcess(double fundReturn, double benchmarkReturn) {;
+	BigDecimal computeExcess(double fundReturn, double benchmarkReturn) {;
 		BigDecimal excess = new BigDecimal(fundReturn)
 								.subtract(new BigDecimal(benchmarkReturn))
 								.setScale(2, RoundingMode.HALF_DOWN);
@@ -95,7 +95,7 @@ public class FundPerformanceService {
 	 * @param excess the excess
 	 * @return the performance message
 	 */
-	private String getPerformanceMessage(double value) {
+	String getPerformanceMessage(double value) {
 		String message = "";
 		if(value < -1) {
 			message = PerformanceMessageEnum.UNDER_PERFORM.getMessage();
@@ -151,7 +151,6 @@ public class FundPerformanceService {
 		};
 		return mainMap;
 	}
-	
 	
 	/**
 	 * Convert to list.
